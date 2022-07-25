@@ -477,3 +477,30 @@ div{
 text-align: center;
 padding-top: 3rem;
 }
+/*Profile page//////////////////////*/
+
+#aboutMe{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  border: 1px solid red;
+}
+#aboutMe image{
+  width: 25%;
+  border: 1px solid red
+}
+#apoutMe p{
+  
+}
+
+#myShop{
+  height: 80px;
+  flex:1;
+  border: 1px solid green;
+  
+}
+#myFeed{
+  height: 80px;
+  flex:1;
+  border: 1px solid blue;
+}
