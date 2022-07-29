@@ -15,12 +15,22 @@
             <a href="/signup.html" target="_blank" rel="noopener noreferrer"><span>sign up</span></a>
         </div>
     </header>
-    <section id="aboutMe">
-        <img src="" alt="">
-        <p id="aboutMeParagraph">This is where we write about how we grow food, who we are and why you should buy our food.</p>
-    </section>
-    <section id="myShop"></section>
-    <section id="myFeed"></section>
+    <script>
+        const ul = document.querySelector('ul')
+        const getUsers = async() => {
+          const res = await fetch('/api/auth/getUsers')
+          const data = await res.json()
+          data.user.map((mappedUser)=> {
+            if (mappedUser.username !== 'admin') {
+              let li = `<li> <b>Username</b> => ${mappedUser.username} <br> <b>Role</b> => ${mappedUser.role} </li>`
+              ul.innerHTML += li
+            } else {
+              return null
+            }
+          })
+        }
+        getUsers()
+        </script>
     <footer>
         <section id="footerTop">
             <section id="footerLeft">
