@@ -462,6 +462,16 @@
   background-color: rgb(32, 144, 0);
   border-top: 1px solid wheat;
  }
+ /*for ejs todo////////////////////////*/
+ h1{
+  color: red;
+}
+
+/* style for completed data */
+.completed{
+  color: gray;
+  text-decoration: line-through;
+}
  
  /*sign up page////////////////////*/
 
